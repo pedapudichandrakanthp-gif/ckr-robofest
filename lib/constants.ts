@@ -1,0 +1,295 @@
+export const eventTypes = [
+  {
+    id: 'weddings',
+    title: 'Weddings',
+    description: 'Elegant robotic entertainment for your special day',
+    media: {
+      imageUrl: null,
+      composition: 'mandap-glow',
+    },
+  },
+  {
+    id: 'birthdays',
+    title: 'Birthdays',
+    description: 'Memorable robot experiences for celebrations',
+    media: {
+      imageUrl: null,
+      composition: 'celebration-orbit',
+    },
+  },
+  {
+    id: 'corporate',
+    title: 'Corporate Events',
+    description: 'Professional robotics for business functions',
+    media: {
+      imageUrl: null,
+      composition: 'stage-grid',
+    },
+  },
+  {
+    id: 'schools',
+    title: 'Schools & Colleges',
+    description: 'Educational and entertaining robot demonstrations',
+    media: {
+      imageUrl: null,
+      composition: 'learning-arc',
+    },
+  },
+  {
+    id: 'exhibitions',
+    title: 'Exhibitions & Malls',
+    description: 'Engaging robotic displays for public venues',
+    media: {
+      imageUrl: null,
+      composition: 'public-showcase',
+    },
+  },
+  {
+    id: 'brand',
+    title: 'Brand Activations',
+    description: 'Interactive experiences for product launches',
+    media: {
+      imageUrl: null,
+      composition: 'brand-reveal',
+    },
+  },
+  {
+    id: 'grand-openings',
+    title: 'Grand Openings',
+    description: 'Dramatic robot reveals for new businesses',
+    media: {
+      imageUrl: null,
+      composition: 'ribbon-spotlight',
+    },
+  },
+] as const;
+
+export const experiences = [
+  {
+    id: 'robot-dance',
+    title: 'Robot Dance',
+    description: 'Choreographed robot performance concepts for celebration moments and stage-focused event flow.',
+    idealEvents: ['weddings', 'birthdays', 'corporate', 'schools'],
+    media: {
+      imageUrl: null,
+      mood: 'performance-stage',
+    },
+  },
+  {
+    id: 'robot-greeting',
+    title: 'Robot Greeting',
+    description: 'Welcoming arrivals and prepared messages, planned around the selected robot and guest flow.',
+    idealEvents: ['weddings', 'corporate', 'grand-openings'],
+    media: {
+      imageUrl: null,
+      mood: 'welcome-entrance',
+    },
+  },
+  {
+    id: 'action-show',
+    title: 'Action Show',
+    description: 'Dynamic movement demonstrations designed for controlled performance areas and suitable venues.',
+    idealEvents: ['birthdays', 'schools', 'exhibitions'],
+    media: {
+      imageUrl: null,
+      mood: 'motion-show',
+    },
+  },
+  {
+    id: 'photo-experience',
+    title: 'Photo Experience',
+    description: 'Controlled guest interaction for memorable photos',
+    idealEvents: ['weddings', 'birthdays', 'corporate'],
+    media: {
+      imageUrl: null,
+      mood: 'photo-moment',
+    },
+  },
+  {
+    id: 'interactive',
+    title: 'Interactive Experience',
+    description: 'Supervised demonstrations where interaction is shaped by robot capability and event safety needs.',
+    idealEvents: ['schools', 'exhibitions', 'brand'],
+    media: {
+      imageUrl: null,
+      mood: 'guest-interaction',
+    },
+  },
+  {
+    id: 'grand-entrance',
+    title: 'Grand Entrance',
+    description: 'A dramatic robot arrival concept for special occasions, launches, and celebration highlights.',
+    idealEvents: ['weddings', 'grand-openings', 'corporate'],
+    media: {
+      imageUrl: null,
+      mood: 'grand-reveal',
+    },
+  },
+  {
+    id: 'robot-host',
+    title: 'Robot Host',
+    description: 'Prepared announcements and host-style moments where supported by the chosen robot and setup.',
+    idealEvents: ['corporate', 'exhibitions', 'brand'],
+    media: {
+      imageUrl: null,
+      mood: 'host-spotlight',
+    },
+  },
+] as const;
+
+export const packages = [
+  {
+    id: 'standard',
+    name: 'Standard',
+    price: 9999,
+    duration: 'Up to 30 minutes',
+    features: [
+      'Robot appearance',
+      '1 dance performance',
+      'Greeting',
+      'Photo opportunity',
+      'Professional operator',
+      'Basic setup',
+    ],
+    popular: false,
+  },
+  {
+    id: 'medium',
+    name: 'Medium',
+    price: 14999,
+    duration: 'Up to 60 minutes',
+    features: [
+      '2-3 performances',
+      'Dance routines',
+      'Greetings',
+      'Interactive demonstration',
+      'Photo experience',
+      'Customized event message',
+      'Operator',
+      'Setup and pack-down',
+      'Local transportation',
+    ],
+    popular: true,
+  },
+  {
+    id: 'premium',
+    name: 'Premium',
+    price: 24999,
+    duration: 'Up to 2 hours',
+    features: [
+      'Grand entrance',
+      'Multiple performances',
+      '3-4 dance routines',
+      'Customized greeting',
+      'Action show',
+      'Guest interaction',
+      'Photo experience',
+      'Dedicated operator',
+      'Event coordination',
+      'Setup and pack-down',
+      'Transportation',
+    ],
+    popular: false,
+  },
+  {
+    id: 'signature',
+    name: 'Signature',
+    price: null,
+    duration: 'Custom',
+    features: [
+      'Corporate events',
+      'Brand activations',
+      'Large weddings',
+      'Exhibitions',
+      'Malls',
+      'Multi-robot experiences',
+      'Custom choreography',
+      'Extended duration',
+    ],
+    popular: false,
+  },
+] as const;
+
+export const serviceAreas = [
+  {
+    id: 'anakapalle',
+    name: 'Anakapalle',
+    primary: true,
+  },
+  {
+    id: 'visakhapatnam',
+    name: 'Visakhapatnam',
+    primary: true,
+  },
+  {
+    id: 'vizianagaram',
+    name: 'Vizianagaram',
+    primary: false,
+  },
+  {
+    id: 'srikakulam',
+    name: 'Srikakulam',
+    primary: false,
+  },
+  {
+    id: 'andhra-pradesh',
+    name: 'Andhra Pradesh',
+    primary: false,
+  },
+] as const;
+
+export const processSteps = [
+  {
+    step: 1,
+    title: 'Tell us about your event',
+    description: 'Share your event details, preferences, and requirements',
+  },
+  {
+    step: 2,
+    title: 'Choose your experience',
+    description: 'Select from our robots, packages, and experience options',
+  },
+  {
+    step: 3,
+    title: 'Confirm availability',
+    description: 'Check date availability and receive a detailed quote',
+  },
+  {
+    step: 4,
+    title: 'We prepare and perform',
+    description: 'Our team handles setup, operation, and a memorable experience',
+  },
+] as const;
+
+export const safetyFeatures = [
+  {
+    id: 'trained-operator',
+    title: 'Trained Operator',
+    description: 'Every event includes a professional robot operator',
+  },
+  {
+    id: 'controlled-area',
+    title: 'Controlled Performance Area',
+    description: 'Designated safe zones for robot operation',
+  },
+  {
+    id: 'venue-assessment',
+    title: 'Venue Assessment',
+    description: 'Pre-event evaluation of space and requirements',
+  },
+  {
+    id: 'supervised-interaction',
+    title: 'Supervised Interaction',
+    description: 'All guest interactions are monitored for safety',
+  },
+  {
+    id: 'equipment-inspection',
+    title: 'Equipment Inspection',
+    description: 'Regular maintenance and safety checks',
+  },
+  {
+    id: 'safe-transport',
+    title: 'Safe Transport',
+    description: 'Professional handling and secure transportation',
+  },
+] as const;

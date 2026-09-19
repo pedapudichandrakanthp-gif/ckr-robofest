@@ -1,26 +1,151 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* CKR Design System - Premium Dark Foundation */
+  --ckr-black: #0a0a0a;
+  --ckr-charcoal: #1a1a1a;
+  --ckr-dark-gray: #2a2a2a;
+  --ckr-medium-gray: #4a4a4a;
+  --ckr-light-gray: #8a8a8a;
+  
+  /* Light surfaces */
+  --ckr-ivory: #faf8f5;
+  --ckr-off-white: #f5f3f0;
+  --ckr-warm-white: #fffefc;
+  
+  /* Premium metallic accents */
+  --ckr-gold: #d4af37;
+  --ckr-gold-light: #e8c847;
+  --ckr-gold-dark: #b89628;
+  --ckr-bronze: #a67c52;
+  
+  /* Neutral grays */
+  --ckr-gray-100: #f5f5f4;
+  --ckr-gray-200: #e7e5e4;
+  --ckr-gray-300: #d6d3d1;
+  --ckr-gray-400: #a8a29e;
+  --ckr-gray-500: #78716c;
+  --ckr-gray-600: #57534e;
+  --ckr-gray-700: #44403c;
+  --ckr-gray-800: #292524;
+  --ckr-gray-900: #1c1917;
+  
+  /* Gradients */
+  --ckr-gradient-warm: linear-gradient(135deg, #d4af37 0%, #e8c847 50%, #d4af37 100%);
+  --ckr-gradient-dark: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+  --ckr-gradient-subtle: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+  
+  /* Typography */
+  --ckr-display: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --ckr-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  
+  /* Spacing */
+  --ckr-container-sm: 640px;
+  --ckr-container-md: 768px;
+  --ckr-container-lg: 1024px;
+  --ckr-container-xl: 1280px;
+  --ckr-container-2xl: 1536px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ckr-black: #0a0a0a;
+  --color-ckr-charcoal: #1a1a1a;
+  --color-ckr-dark-gray: #2a2a2a;
+  --color-ckr-medium-gray: #4a4a4a;
+  --color-ckr-light-gray: #8a8a8a;
+  --color-ckr-ivory: #faf8f5;
+  --color-ckr-off-white: #f5f3f0;
+  --color-ckr-warm-white: #fffefc;
+  --color-ckr-gold: #d4af37;
+  --color-ckr-gold-light: #e8c847;
+  --color-ckr-gold-dark: #b89628;
+  --color-ckr-bronze: #a67c52;
+  --color-ckr-gray-100: #f5f5f4;
+  --color-ckr-gray-200: #e7e5e4;
+  --color-ckr-gray-300: #d6d3d1;
+  --color-ckr-gray-400: #a8a29e;
+  --color-ckr-gray-500: #78716c;
+  --color-ckr-gray-600: #57534e;
+  --color-ckr-gray-700: #44403c;
+  --color-ckr-gray-800: #292524;
+  --color-ckr-gray-900: #1c1917;
+  
+  --font-ckr-display: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-ckr-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--ckr-black);
+  color: var(--ckr-ivory);
+  font-family: var(--ckr-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle background texture */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ckr-charcoal);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ckr-medium-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ckr-light-gray);
+}
+
+/* Focus states */
+:focus-visible {
+  outline: 2px solid var(--ckr-gold);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: var(--ckr-gold);
+  color: var(--ckr-black);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .animate-pulse {
+    animation: none !important;
+  }
 }
