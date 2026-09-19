@@ -1,3 +1,4 @@
+import ConfiguredMedia from '@/components/media/ConfiguredMedia';
 import { experiences } from '@/lib/constants';
 
 const experienceMediaStyles = {
@@ -60,6 +61,7 @@ export default function ExperienceCard() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {experiences.map((experience) => {
             const mediaStyle = experienceMediaStyles[experience.media.mood];
+            const hasMedia = Boolean(experience.media.asset.src);
 
             return (
               <div
@@ -69,26 +71,30 @@ export default function ExperienceCard() {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-ckr-gold/0 via-ckr-gold/50 to-ckr-gold/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 <div className="aspect-video bg-gradient-to-br from-ckr-black via-ckr-charcoal to-ckr-black relative overflow-hidden">
-                  {/* Future: render approved media from experience.media.imageUrl here. */}
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(212,175,55,0.16),transparent_35%)]"></div>
-                  <div className={`absolute blur-2xl ${mediaStyle.beam}`}></div>
-                  <div className={`absolute ${mediaStyle.accent}`}></div>
-                  <div className={`absolute left-1/2 top-1/2 h-px w-44 -translate-x-1/2 bg-gradient-to-r from-transparent via-ckr-gold/40 to-transparent ${mediaStyle.line}`}></div>
-                  <div className="absolute bottom-4 left-6 right-6 h-8 rounded-[50%] border border-ckr-gold/15 bg-ckr-black/40"></div>
+                  <ConfiguredMedia asset={experience.media.asset} className="absolute inset-0" />
+                  <div className={hasMedia ? 'absolute inset-0 bg-gradient-to-t from-ckr-black/55 via-ckr-black/10 to-transparent' : 'absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(212,175,55,0.16),transparent_35%)]'}></div>
+                  {!hasMedia && (
+                    <>
+                      <div className={`absolute blur-2xl ${mediaStyle.beam}`}></div>
+                      <div className={`absolute ${mediaStyle.accent}`}></div>
+                      <div className={`absolute left-1/2 top-1/2 h-px w-44 -translate-x-1/2 bg-gradient-to-r from-transparent via-ckr-gold/40 to-transparent ${mediaStyle.line}`}></div>
+                      <div className="absolute bottom-4 left-6 right-6 h-8 rounded-[50%] border border-ckr-gold/15 bg-ckr-black/40"></div>
 
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="relative h-20 w-20">
-                      <div className="absolute inset-0 rounded-full bg-ckr-gold/15 blur-xl group-hover:bg-ckr-gold/20 transition-colors"></div>
-                      <div className="relative flex h-full w-full items-center justify-center rounded-full border border-ckr-gold/35 bg-ckr-black/55 backdrop-blur-sm">
-                        <svg className="w-8 h-8 text-ckr-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18.5a6.5 6.5 0 100-13 6.5 6.5 0 000 13z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l2.5 2" />
-                        </svg>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="relative h-20 w-20">
+                          <div className="absolute inset-0 rounded-full bg-ckr-gold/15 blur-xl group-hover:bg-ckr-gold/20 transition-colors"></div>
+                          <div className="relative flex h-full w-full items-center justify-center rounded-full border border-ckr-gold/35 bg-ckr-black/55 backdrop-blur-sm">
+                            <svg className="w-8 h-8 text-ckr-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18.5a6.5 6.5 0 100-13 6.5 6.5 0 000 13z" />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l2.5 2" />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
+                    </>
+                  )}
                   <div className="absolute left-4 top-4 rounded-full border border-ckr-gold/20 bg-ckr-black/50 px-2.5 py-1 text-[10px] uppercase tracking-widest text-ckr-gold/90">
-                    Event moment
+                    {experience.media.asset.label ?? 'Event moment'}
                   </div>
                 </div>
                 

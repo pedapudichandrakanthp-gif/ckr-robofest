@@ -1,10 +1,12 @@
+import { homeMedia } from '@/lib/media';
+
 export const eventTypes = [
   {
     id: 'weddings',
     title: 'Weddings',
     description: 'Elegant robotic entertainment for your special day',
     media: {
-      imageUrl: null,
+      asset: homeMedia.events.weddings,
       composition: 'mandap-glow',
     },
   },
@@ -13,7 +15,7 @@ export const eventTypes = [
     title: 'Birthdays',
     description: 'Memorable robot experiences for celebrations',
     media: {
-      imageUrl: null,
+      asset: homeMedia.events.birthdays,
       composition: 'celebration-orbit',
     },
   },
@@ -22,7 +24,7 @@ export const eventTypes = [
     title: 'Corporate Events',
     description: 'Professional robotics for business functions',
     media: {
-      imageUrl: null,
+      asset: homeMedia.events.corporate,
       composition: 'stage-grid',
     },
   },
@@ -31,7 +33,7 @@ export const eventTypes = [
     title: 'Schools & Colleges',
     description: 'Educational and entertaining robot demonstrations',
     media: {
-      imageUrl: null,
+      asset: homeMedia.events.schools,
       composition: 'learning-arc',
     },
   },
@@ -40,7 +42,7 @@ export const eventTypes = [
     title: 'Exhibitions & Malls',
     description: 'Engaging robotic displays for public venues',
     media: {
-      imageUrl: null,
+      asset: homeMedia.events.exhibitions,
       composition: 'public-showcase',
     },
   },
@@ -49,7 +51,7 @@ export const eventTypes = [
     title: 'Brand Activations',
     description: 'Interactive experiences for product launches',
     media: {
-      imageUrl: null,
+      asset: homeMedia.events.brand,
       composition: 'brand-reveal',
     },
   },
@@ -58,7 +60,7 @@ export const eventTypes = [
     title: 'Grand Openings',
     description: 'Dramatic robot reveals for new businesses',
     media: {
-      imageUrl: null,
+      asset: homeMedia.events.grandOpenings,
       composition: 'ribbon-spotlight',
     },
   },
@@ -71,7 +73,7 @@ export const experiences = [
     description: 'Choreographed robot performance concepts for celebration moments and stage-focused event flow.',
     idealEvents: ['weddings', 'birthdays', 'corporate', 'schools'],
     media: {
-      imageUrl: null,
+      asset: homeMedia.experiences.robotDance,
       mood: 'performance-stage',
     },
   },
@@ -81,7 +83,7 @@ export const experiences = [
     description: 'Welcoming arrivals and prepared messages, planned around the selected robot and guest flow.',
     idealEvents: ['weddings', 'corporate', 'grand-openings'],
     media: {
-      imageUrl: null,
+      asset: homeMedia.experiences.robotGreeting,
       mood: 'welcome-entrance',
     },
   },
@@ -91,7 +93,7 @@ export const experiences = [
     description: 'Dynamic movement demonstrations designed for controlled performance areas and suitable venues.',
     idealEvents: ['birthdays', 'schools', 'exhibitions'],
     media: {
-      imageUrl: null,
+      asset: homeMedia.experiences.actionShow,
       mood: 'motion-show',
     },
   },
@@ -101,7 +103,7 @@ export const experiences = [
     description: 'Controlled guest interaction for memorable photos',
     idealEvents: ['weddings', 'birthdays', 'corporate'],
     media: {
-      imageUrl: null,
+      asset: homeMedia.experiences.photoExperience,
       mood: 'photo-moment',
     },
   },
@@ -111,7 +113,7 @@ export const experiences = [
     description: 'Supervised demonstrations where interaction is shaped by robot capability and event safety needs.',
     idealEvents: ['schools', 'exhibitions', 'brand'],
     media: {
-      imageUrl: null,
+      asset: homeMedia.experiences.interactive,
       mood: 'guest-interaction',
     },
   },
@@ -121,7 +123,7 @@ export const experiences = [
     description: 'A dramatic robot arrival concept for special occasions, launches, and celebration highlights.',
     idealEvents: ['weddings', 'grand-openings', 'corporate'],
     media: {
-      imageUrl: null,
+      asset: homeMedia.experiences.grandEntrance,
       mood: 'grand-reveal',
     },
   },
@@ -131,7 +133,7 @@ export const experiences = [
     description: 'Prepared announcements and host-style moments where supported by the chosen robot and setup.',
     idealEvents: ['corporate', 'exhibitions', 'brand'],
     media: {
-      imageUrl: null,
+      asset: homeMedia.experiences.robotHost,
       mood: 'host-spotlight',
     },
   },

@@ -1,3 +1,4 @@
+import ConfiguredMedia from '@/components/media/ConfiguredMedia';
 import { eventTypes } from '@/lib/constants';
 
 const eventMediaStyles = {
@@ -50,6 +51,7 @@ export default function EventTypeCard() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {eventTypes.map((event) => {
             const mediaStyle = eventMediaStyles[event.media.composition];
+            const hasMedia = Boolean(event.media.asset.src);
 
             return (
               <div
@@ -59,21 +61,30 @@ export default function EventTypeCard() {
                 <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-ckr-gold/0 via-ckr-gold/50 to-ckr-gold/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 <div className="aspect-square bg-gradient-to-br from-ckr-charcoal via-ckr-black to-ckr-charcoal relative overflow-hidden">
-                  {/* Future: render approved media from event.media.imageUrl here. */}
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(212,175,55,0.14),transparent_34%)]"></div>
-                  <div className={`absolute border border-ckr-gold/20 bg-ckr-gold/8 shadow-xl shadow-ckr-gold/5 ${mediaStyle.focal}`}></div>
-                  <div className={`absolute border border-ckr-gold/15 bg-ckr-black/35 ${mediaStyle.ornament}`}></div>
-                  <div className="absolute left-1/2 top-1/2 h-20 w-px -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-ckr-gold/35 to-transparent"></div>
-                  <div className="absolute bottom-5 left-5 right-5 h-7 rounded-[50%] border border-ckr-gold/15 bg-ckr-black/45"></div>
+                  <ConfiguredMedia asset={event.media.asset} className="absolute inset-0" />
+                  <div className={hasMedia ? 'absolute inset-0 bg-gradient-to-t from-ckr-black/55 via-ckr-black/10 to-transparent' : 'absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(212,175,55,0.14),transparent_34%)]'}></div>
+                  {!hasMedia && (
+                    <>
+                      <div className={`absolute border border-ckr-gold/20 bg-ckr-gold/8 shadow-xl shadow-ckr-gold/5 ${mediaStyle.focal}`}></div>
+                      <div className={`absolute border border-ckr-gold/15 bg-ckr-black/35 ${mediaStyle.ornament}`}></div>
+                      <div className="absolute left-1/2 top-1/2 h-20 w-px -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-ckr-gold/35 to-transparent"></div>
+                      <div className="absolute bottom-5 left-5 right-5 h-7 rounded-[50%] border border-ckr-gold/15 bg-ckr-black/45"></div>
 
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-14 h-14 bg-ckr-black/55 rounded-xl flex items-center justify-center border border-ckr-gold/25 backdrop-blur-sm group-hover:border-ckr-gold/45 transition-colors">
-                      <svg className="w-7 h-7 text-ckr-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                      </svg>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-14 h-14 bg-ckr-black/55 rounded-xl flex items-center justify-center border border-ckr-gold/25 backdrop-blur-sm group-hover:border-ckr-gold/45 transition-colors">
+                          <svg className="w-7 h-7 text-ckr-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div className="absolute left-4 top-4 h-1.5 w-10 rounded-full bg-ckr-gold/45"></div>
+                    </>
+                  )}
+                  {event.media.asset.label && (
+                    <div className="absolute left-4 bottom-4 rounded-full border border-ckr-gold/15 bg-ckr-black/55 px-2.5 py-1 text-[10px] uppercase tracking-widest text-ckr-gold/90 backdrop-blur-sm">
+                      {event.media.asset.label}
                     </div>
-                  </div>
-                  <div className="absolute left-4 top-4 h-1.5 w-10 rounded-full bg-ckr-gold/45"></div>
+                  )}
                 </div>
                 
                 <div className="p-5">
