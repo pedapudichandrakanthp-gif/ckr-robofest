@@ -12,7 +12,7 @@ export default function SafetySection() {
             Safety & Professional Operation
           </h2>
           <p className="text-ckr-light-gray max-w-2xl mx-auto">
-            Your safety and satisfaction are our top priorities. Every event includes professional operation and safety measures.
+            Your safety and satisfaction are our top priorities. Performances will use a trained operator and controlled performance area. Final safety requirements depend on the selected robot, venue and performance.
           </p>
         </div>
 

@@ -15,11 +15,11 @@ export default function CTASection() {
           Make Your Next Event Unforgettable
         </h2>
         <p className="text-ckr-light-gray max-w-2xl mx-auto mb-8">
-          Bring the future of entertainment to your celebration with our premium robot experiences.
+          Bring the future of entertainment to your celebration with planned premium robot experiences.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" href="#book">
-            BOOK NOW
+            REQUEST QUOTE
           </Button>
           <Button size="lg" variant="outline" href="#contact">
             CONTACT CKR

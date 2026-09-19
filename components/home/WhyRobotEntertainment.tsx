@@ -10,7 +10,7 @@ export default function WhyRobotEntertainment() {
     },
     {
       title: 'Professional Presentation',
-      description: 'Our trained operators ensure seamless performances that enhance your event without disrupting the flow.',
+      description: 'Planned operator-supported performances ensure seamless experiences that enhance your event without disrupting the flow.',
     },
     {
       title: 'Customizable',

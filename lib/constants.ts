@@ -70,7 +70,7 @@ export const experiences = [
   {
     id: 'robot-dance',
     title: 'Robot Dance',
-    description: 'Choreographed robot performance concepts for celebration moments and stage-focused event flow.',
+    description: 'Choreographed robot performance concepts for celebration moments and stage-focused event flow. Dance capabilities depend on the selected robot.',
     idealEvents: ['weddings', 'birthdays', 'corporate', 'schools'],
     media: {
       asset: homeMedia.experiences.robotDance,
@@ -90,7 +90,7 @@ export const experiences = [
   {
     id: 'action-show',
     title: 'Action Show',
-    description: 'Dynamic movement demonstrations designed for controlled performance areas and suitable venues.',
+    description: 'Controlled choreographed movement demonstrations designed for controlled performance areas and suitable venues. Movement capabilities depend on the selected robot.',
     idealEvents: ['birthdays', 'schools', 'exhibitions'],
     media: {
       asset: homeMedia.experiences.actionShow,
@@ -100,7 +100,7 @@ export const experiences = [
   {
     id: 'photo-experience',
     title: 'Photo Experience',
-    description: 'Controlled guest interaction for memorable photos',
+    description: 'Controlled guest interaction for memorable photos. Interaction capabilities depend on the selected robot and event safety requirements.',
     idealEvents: ['weddings', 'birthdays', 'corporate'],
     media: {
       asset: homeMedia.experiences.photoExperience,
@@ -150,7 +150,7 @@ export const packages = [
       '1 dance performance',
       'Greeting',
       'Photo opportunity',
-      'Professional operator',
+      'Operator supervision',
       'Basic setup',
     ],
     popular: false,
@@ -167,7 +167,7 @@ export const packages = [
       'Interactive demonstration',
       'Photo experience',
       'Customized event message',
-      'Operator',
+      'Operator supervision',
       'Setup and pack-down',
       'Local transportation',
     ],
@@ -249,17 +249,17 @@ export const processSteps = [
   {
     step: 2,
     title: 'Choose your experience',
-    description: 'Select from our robots, packages, and experience options',
+    description: 'Select from planned robot options, packages, and experience types',
   },
   {
     step: 3,
     title: 'Confirm availability',
-    description: 'Check date availability and receive a detailed quote',
+    description: 'Check robot availability and receive a detailed quote',
   },
   {
     step: 4,
     title: 'We prepare and perform',
-    description: 'Our team handles setup, operation, and a memorable experience',
+    description: 'CKR coordinates the selected robot, operator and event setup',
   },
 ] as const;
 
@@ -267,31 +267,58 @@ export const safetyFeatures = [
   {
     id: 'trained-operator',
     title: 'Trained Operator',
-    description: 'Every event includes a professional robot operator',
+    description: 'Planned operator-supported performances with professional supervision',
   },
   {
     id: 'controlled-area',
     title: 'Controlled Performance Area',
-    description: 'Designated safe zones for robot operation',
+    description: 'Designated safe zones for robot operation as per venue requirements',
   },
   {
     id: 'venue-assessment',
     title: 'Venue Assessment',
-    description: 'Pre-event evaluation of space and requirements',
+    description: 'Pre-event evaluation of space and requirements for robot setup',
   },
   {
     id: 'supervised-interaction',
     title: 'Supervised Interaction',
-    description: 'All guest interactions are monitored for safety',
+    description: 'All guest interactions will be monitored for safety',
   },
   {
     id: 'equipment-inspection',
     title: 'Equipment Inspection',
-    description: 'Regular maintenance and safety checks',
+    description: 'Regular maintenance and safety checks before each event',
   },
   {
     id: 'safe-transport',
     title: 'Safe Transport',
-    description: 'Professional handling and secure transportation',
+    description: 'Professional handling and secure transportation to venue',
+  },
+] as const;
+
+export const robotsUnderConsideration = [
+  {
+    id: 'unitree-g1',
+    name: 'Unitree G1',
+    description: 'Advanced humanoid robot designed for dynamic movement and interactive capabilities. Suitable for dance performances, greetings, and controlled action demonstrations.',
+    suitableExperiences: ['Robot Dance', 'Robot Greeting', 'Action Show', 'Grand Entrance'],
+    status: 'Under Evaluation',
+    capabilities: 'Dynamic movement, gesture recognition, balance control',
+  },
+  {
+    id: 'unitree-go2',
+    name: 'Unitree Go2',
+    description: 'Quadruped robot with excellent stability and interactive features. Ideal for greetings, photo experiences, and supervised guest interactions.',
+    suitableExperiences: ['Robot Greeting', 'Photo Experience', 'Interactive Experience'],
+    status: 'Under Evaluation',
+    capabilities: 'Stable locomotion, voice interaction, object recognition',
+  },
+  {
+    id: 'limx-luna',
+    name: 'LimX Luna',
+    description: 'Specialized humanoid robot with emphasis on smooth, elegant movement. Perfect for dance performances, grand entrances, and hosting duties.',
+    suitableExperiences: ['Robot Dance', 'Grand Entrance', 'Robot Host'],
+    status: 'Under Evaluation',
+    capabilities: 'Fluid motion, natural gestures, advanced balance',
   },
 ] as const;

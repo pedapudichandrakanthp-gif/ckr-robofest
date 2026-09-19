@@ -19,10 +19,14 @@ export default function Footer() {
             <h3 className="text-ckr-gold font-semibold mb-4">Navigation</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">Home</a></li>
-              <li><a href="#robots" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">Our Robots</a></li>
+              <li><a href="#robots" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">Robots</a></li>
               <li><a href="#experiences" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">Experiences</a></li>
+              <li><a href="#events" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">Events</a></li>
               <li><a href="#packages" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">Packages</a></li>
               <li><a href="#how-it-works" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">How It Works</a></li>
+              <li><a href="#gallery" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">Gallery</a></li>
+              <li><a href="#about" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">About</a></li>
+              <li><a href="#contact" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">Contact</a></li>
             </ul>
           </div>
 
@@ -59,11 +63,6 @@ export default function Footer() {
           <p className="text-ckr-medium-gray text-sm">
             © {currentYear} Chandrakanth Robofest. All rights reserved.
           </p>
-          <div className="flex gap-6">
-            <a href="#" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">Privacy</a>
-            <a href="#" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">Terms</a>
-            <a href="#" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">Safety</a>
-          </div>
         </div>
       </div>
     </footer>

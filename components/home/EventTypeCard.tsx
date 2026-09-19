@@ -34,7 +34,7 @@ const eventMediaStyles = {
 
 export default function EventTypeCard() {
   return (
-    <section className="py-20 bg-ckr-charcoal">
+    <section id="events" className="py-20 bg-ckr-charcoal">
       <div className="max-w-ckr-container-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="text-ckr-gold text-sm font-semibold tracking-widest uppercase mb-3">
@@ -44,11 +44,11 @@ export default function EventTypeCard() {
             Events We Serve
           </h2>
           <p className="text-ckr-light-gray max-w-2xl mx-auto">
-            From intimate celebrations to grand corporate functions, our robot entertainment creates memorable experiences for every occasion.
+            From intimate celebrations to grand corporate functions, robot entertainment creates memorable experiences for every occasion.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {eventTypes.map((event) => {
             const mediaStyle = eventMediaStyles[event.media.composition];
             const hasMedia = Boolean(event.media.asset.src);
@@ -60,7 +60,7 @@ export default function EventTypeCard() {
               >
                 <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-ckr-gold/0 via-ckr-gold/50 to-ckr-gold/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
-                <div className="aspect-square bg-gradient-to-br from-ckr-charcoal via-ckr-black to-ckr-charcoal relative overflow-hidden">
+                <div className="aspect-[16/9] bg-gradient-to-br from-ckr-charcoal via-ckr-black to-ckr-charcoal relative overflow-hidden">
                   <ConfiguredMedia asset={event.media.asset} className="absolute inset-0" />
                   <div className={hasMedia ? 'absolute inset-0 bg-gradient-to-t from-ckr-black/55 via-ckr-black/10 to-transparent' : 'absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(212,175,55,0.14),transparent_34%)]'}></div>
                   {!hasMedia && (

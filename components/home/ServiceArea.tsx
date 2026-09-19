@@ -12,7 +12,7 @@ export default function ServiceArea() {
             Service Area
           </h2>
           <p className="text-ckr-light-gray max-w-2xl mx-auto">
-            We serve events across Andhra Pradesh with primary focus on Anakapalle and Visakhapatnam.
+            Planned service area with primary focus on Anakapalle and Visakhapatnam, expanding across Andhra Pradesh.
           </p>
         </div>
 

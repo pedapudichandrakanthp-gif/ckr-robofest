@@ -9,8 +9,9 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '#', label: 'Home' },
-    { href: '#robots', label: 'Our Robots' },
+    { href: '#robots', label: 'Robots' },
     { href: '#experiences', label: 'Experiences' },
+    { href: '#events', label: 'Events' },
     { href: '#packages', label: 'Packages' },
     { href: '#how-it-works', label: 'How It Works' },
     { href: '#gallery', label: 'Gallery' },
@@ -38,7 +39,7 @@ export default function Navbar() {
 
           <div className="hidden md:block">
             <Button size="sm" href="#book">
-              BOOK NOW
+              REQUEST QUOTE
             </Button>
           </div>
 
@@ -87,7 +88,7 @@ export default function Navbar() {
               </a>
             ))}
             <Button fullWidth size="md" href="#book" className="mt-4">
-              BOOK NOW
+              REQUEST QUOTE
             </Button>
           </div>
         </div>

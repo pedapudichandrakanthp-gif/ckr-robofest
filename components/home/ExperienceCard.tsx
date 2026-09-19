@@ -51,14 +51,11 @@ export default function ExperienceCard() {
             Robot Experiences
           </h2>
           <p className="text-ckr-light-gray max-w-2xl mx-auto">
-            Discover the range of interactive robot experiences designed to make your event extraordinary.
-          </p>
-          <p className="text-ckr-medium-gray text-sm mt-3">
-            Available experiences depend on the selected robot and event setup.
+            Discover the range of interactive robot experiences designed to make your event extraordinary. Available experiences depend on the selected robot and event setup.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {experiences.map((experience) => {
             const mediaStyle = experienceMediaStyles[experience.media.mood];
             const hasMedia = Boolean(experience.media.asset.src);

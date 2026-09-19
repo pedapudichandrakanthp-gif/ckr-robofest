@@ -13,10 +13,10 @@ export default function PackageCard() {
             Packages
           </h2>
           <p className="text-ckr-light-gray max-w-2xl mx-auto">
-            Choose from our flexible packages designed to suit events of all sizes.
+            Proposed CKR starting packages for planning purposes.
           </p>
           <p className="text-ckr-medium-gray text-sm mt-4">
-            * Prices are illustrative starting packages. Final pricing varies by robot, duration, location, and customization.
+            * Final pricing depends on selected robot, event duration, location, travel, setup and customization.
           </p>
         </div>
 
@@ -66,13 +66,13 @@ export default function PackageCard() {
                 ))}
               </ul>
 
-              <Button 
-                variant={pkg.popular ? 'primary' : 'outline'} 
-                size="sm" 
-                fullWidth 
+              <Button
+                variant={pkg.popular ? 'primary' : 'outline'}
+                size="sm"
+                fullWidth
                 href="#book"
               >
-                {pkg.price === null ? 'REQUEST QUOTE' : 'BOOK NOW'}
+                REQUEST QUOTE
               </Button>
             </div>
           ))}

@@ -2,7 +2,7 @@ export default function TrustStrip() {
   const features = [
     'Robot Entertainment',
     'Event Experiences',
-    'Professional Setup',
+    'Professional Supervision',
     'Flexible Packages',
   ];
 

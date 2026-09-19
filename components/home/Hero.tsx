@@ -33,10 +33,10 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-6 sm:mb-8">
               <Button size="md" href="#book">
-                BOOK YOUR ROBOT EXPERIENCE
+                REQUEST QUOTE
               </Button>
-              <Button size="md" variant="outline" href="#robots">
-                EXPLORE OUR ROBOTS
+              <Button size="md" variant="outline" href="#experiences">
+                EXPLORE EXPERIENCES
               </Button>
             </div>
 
@@ -84,10 +84,6 @@ export default function Hero() {
                 <div className="rounded-full border border-ckr-gold/20 bg-ckr-black/55 px-3 py-1 backdrop-blur-sm">
                   {heroMedia.label ?? 'Cinematic media showcase'}
                 </div>
-                <div className="flex items-center gap-1.5 rounded-full border border-ckr-gold/20 bg-ckr-black/55 px-2.5 py-1 backdrop-blur-sm">
-                  <span className="h-1.5 w-1.5 rounded-full bg-ckr-gold"></span>
-                  {heroMedia.type === 'video' ? 'Video ready' : 'Image ready'}
-                </div>
               </div>
 
               <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 lg:p-8">
@@ -96,7 +92,7 @@ export default function Hero() {
                     <div className="w-2 h-2 bg-ckr-gold rounded-full shadow-lg shadow-ckr-gold/50"></div>
                     <p className="text-ckr-gold font-semibold text-xs sm:text-sm">Robot + Event Experience</p>
                   </div>
-                  <p className="text-ckr-light-gray text-[10px] sm:text-xs">{heroMedia.credit ?? 'Ready for approved robot photos, demos, and CKR event media.'}</p>
+                  <p className="text-ckr-light-gray text-[10px] sm:text-xs">{heroMedia.credit ?? 'Premium robot entertainment for unforgettable events'}</p>
                 </div>
               </div>
 

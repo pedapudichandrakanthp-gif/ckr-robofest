@@ -31,10 +31,10 @@ export const homeMedia = {
     ...emptyMedia,
     src: '/videos/hero/ckr-hero.mp4',
     posterSrc: '/images/hero/hero-poster.jpg',
-    alt: 'Cinematic placeholder for future CKR robot entertainment photo or video',
-    label: 'Illustrative Media Slot',
-    credit: 'Awaiting approved CKR or licensed media',
-    source: 'CKR media library placeholder',
+    alt: 'Cinematic showcase of robot entertainment experience',
+    label: 'Illustrative Media',
+    credit: 'Robot entertainment concept showcase',
+    source: 'CKR media library',
   },
   experiences: {
     robotDance: {
