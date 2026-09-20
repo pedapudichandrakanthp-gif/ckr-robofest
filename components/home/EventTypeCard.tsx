@@ -34,7 +34,7 @@ const eventMediaStyles = {
 
 export default function EventTypeCard() {
   return (
-    <section id="events" className="py-20 bg-ckr-charcoal">
+    <section id="events" className="py-20 bg-ckr-charcoal scroll-mt-20">
       <div className="max-w-ckr-container-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="text-ckr-gold text-sm font-semibold tracking-widest uppercase mb-3">
@@ -80,11 +80,7 @@ export default function EventTypeCard() {
                       <div className="absolute left-4 top-4 h-1.5 w-10 rounded-full bg-ckr-gold/45"></div>
                     </>
                   )}
-                  {event.media.asset.label && (
-                    <div className="absolute left-4 bottom-4 rounded-full border border-ckr-gold/15 bg-ckr-black/55 px-2.5 py-1 text-[10px] uppercase tracking-widest text-ckr-gold/90 backdrop-blur-sm">
-                      {event.media.asset.label}
-                    </div>
-                  )}
+
                 </div>
                 
                 <div className="p-5">

@@ -41,7 +41,7 @@ const experienceMediaStyles = {
 
 export default function ExperienceCard() {
   return (
-    <section id="experiences" className="py-20 bg-ckr-black">
+    <section id="experiences" className="py-20 bg-ckr-black scroll-mt-20">
       <div className="max-w-ckr-container-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="text-ckr-gold text-sm font-semibold tracking-widest uppercase mb-3">
@@ -90,9 +90,7 @@ export default function ExperienceCard() {
                       </div>
                     </>
                   )}
-                  <div className="absolute left-4 top-4 rounded-full border border-ckr-gold/20 bg-ckr-black/50 px-2.5 py-1 text-[10px] uppercase tracking-widest text-ckr-gold/90">
-                    {experience.media.asset.label ?? 'Event moment'}
-                  </div>
+
                 </div>
                 
                 <div className="p-6">
