@@ -19,9 +19,9 @@ export default function Footer() {
             <h3 className="text-ckr-gold font-semibold mb-4">Navigation</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">Home</a></li>
-              <li><a href="#robots" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">Robots</a></li>
               <li><a href="#experiences" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">Experiences</a></li>
               <li><a href="#events" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">Events</a></li>
+              <li><a href="#robots" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">Robots</a></li>
               <li><a href="#packages" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">Packages</a></li>
               <li><a href="#how-it-works" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">How It Works</a></li>
               <li><a href="#gallery" className="text-ckr-light-gray hover:text-ckr-gold text-sm transition-colors">Gallery</a></li>
@@ -51,8 +51,14 @@ export default function Footer() {
               </li>
               <li className="text-ckr-light-gray text-sm">
                 <span className="block text-ckr-medium-gray text-xs">Email</span>
-                <a href="mailto:info@ckrrobofest.com" className="hover:text-ckr-gold transition-colors">
-                  info@ckrrobofest.com
+                <a href="mailto:cgrrobofest@gmail.com?subject=CKR%20Robofest%20Enquiry" className="hover:text-ckr-gold transition-colors">
+                  cgrrobofest@gmail.com
+                </a>
+              </li>
+              <li className="text-ckr-light-gray text-sm">
+                <span className="block text-ckr-medium-gray text-xs">WhatsApp</span>
+                <a href="https://wa.me/918309997616" target="_blank" rel="noopener noreferrer" className="hover:text-ckr-gold transition-colors">
+                  +91 83099 97616
                 </a>
               </li>
             </ul>

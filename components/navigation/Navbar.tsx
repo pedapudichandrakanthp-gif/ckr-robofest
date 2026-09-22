@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import BrandMark from '@/components/brand/BrandMark';
-import Button from '@/components/ui/Button';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,9 +10,9 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '#', label: 'Home', id: 'home' },
-    { href: '#robots', label: 'Robots', id: 'robots' },
     { href: '#experiences', label: 'Experiences', id: 'experiences' },
     { href: '#events', label: 'Events', id: 'events' },
+    { href: '#robots', label: 'Robots', id: 'robots' },
     { href: '#packages', label: 'Packages', id: 'packages' },
     { href: '#how-it-works', label: 'How It Works', id: 'how-it-works' },
     { href: '#gallery', label: 'Gallery', id: 'gallery' },
@@ -111,7 +110,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll, navLinks, isReducedMotion]);
 
-  const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, href: string) => {
     e.preventDefault();
     
     if (href === '#') {
@@ -183,7 +182,9 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-ckr-black/95 backdrop-blur-sm border-b border-ckr-gold/10">
       <div className="max-w-ckr-container-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          <BrandMark variant="short" />
+          <a href="#" onClick={(e) => handleNavClick(e, '#')} className="flex items-center" aria-label="Chandrakanth Robofest - Home">
+            <BrandMark variant="short" />
+          </a>
           
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => {
@@ -205,9 +206,12 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:block">
-            <Button size="sm" href="#book">
+            <button
+              onClick={(e) => handleNavClick(e, '#book')}
+              className="inline-flex items-center justify-center px-4 py-2 bg-ckr-gold text-ckr-black text-sm font-medium rounded-lg hover:bg-ckr-gold-light shadow-lg hover:shadow-xl transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ckr-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ckr-black"
+            >
               REQUEST QUOTE
-            </Button>
+            </button>
           </div>
 
           <button
@@ -260,14 +264,12 @@ export default function Navbar() {
                 </a>
               );
             })}
-            <Button 
-              fullWidth 
-              size="md" 
-              href="#book" 
-              className="mt-4"
+            <button
+              onClick={(e) => handleNavClick(e, '#book')}
+              className="w-full inline-flex items-center justify-center px-6 py-3 bg-ckr-gold text-ckr-black text-base font-medium rounded-lg hover:bg-ckr-gold-light shadow-lg hover:shadow-xl transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ckr-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ckr-black mt-4"
             >
               REQUEST QUOTE
-            </Button>
+            </button>
           </div>
         </div>
       )}

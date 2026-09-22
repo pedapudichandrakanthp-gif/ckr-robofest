@@ -18,9 +18,32 @@ export default function EnquirySection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real implementation, this would send the data to a backend
-    console.log('Enquiry submitted:', formData);
-    alert('Thank you for your enquiry! We will get back to you soon.');
+    
+    // Construct email body
+    const emailBody = `
+Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email}
+
+Event Type: ${formData.eventType}
+Event Date: ${formData.eventDate}
+Location: ${formData.location}
+
+Preferred Experience: ${formData.preferredExperience}
+Package Interest: ${formData.package}
+
+Message:
+${formData.message}
+    `.trim();
+
+    const subject = encodeURIComponent('CKR Robofest Enquiry');
+    const body = encodeURIComponent(emailBody);
+    const mailtoLink = `mailto:cgrrobofest@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Reset form
     setFormData({
       name: '',
       phone: '',
